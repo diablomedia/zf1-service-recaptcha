@@ -1,6 +1,8 @@
 parameters:
     checkMissingIterableValueType: false
     level: 8
+    bootstrapFiles:
+        - ./phpstan-bootstrap.php
     paths:
         - ./
     excludePaths:
@@ -12,13 +14,5 @@ parameters:
             path: ./src/Zend/Service/ReCaptcha.php
         -
             message: '#Function mcrypt_encrypt not found\.#'
-            path: ./src/Zend/Service/ReCaptcha/MailHide.php
-            count: 1
-        -
-            message: '#Constant MCRYPT_MODE_CBC not found\.#'
-            path: ./src/Zend/Service/ReCaptcha/MailHide.php
-            count: 1
-        -
-            message: '#Constant MCRYPT_RIJNDAEL_128 not found\.#'
             path: ./src/Zend/Service/ReCaptcha/MailHide.php
             count: 1
