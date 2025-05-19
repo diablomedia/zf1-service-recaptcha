@@ -1,6 +1,6 @@
 parameters:
-    checkMissingIterableValueType: false
     level: 8
+    treatPhpDocTypesAsCertain: false
     bootstrapFiles:
         - ./phpstan-bootstrap.php
     paths:
@@ -10,9 +10,8 @@ parameters:
         - %rootDir%/../../../tests/*
     ignoreErrors:
         -
-            message: '#Else branch is unreachable because previous condition is always true\.#'
-            path: ./src/Zend/Service/ReCaptcha.php
-        -
             message: '#Function mcrypt_encrypt not found\.#'
             path: ./src/Zend/Service/ReCaptcha/MailHide.php
             count: 1
+        -
+            identifier: missingType.iterableValue
